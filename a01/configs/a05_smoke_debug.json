@@ -1,0 +1,74 @@
+{
+    "algorithm": "VolumeDebug",
+    "auto_focus": true,
+    "beauty_render": false,
+    "camera": {
+        "dir": [
+            0.63866,
+            0.065207,
+            -0.76672
+        ],
+        "fov": 70,
+        "lens_radius": 0,
+        "pos": [
+            6.4127,
+            5.614,
+            3.6403
+        ],
+        "up": [
+            -0.041615,
+            0.99787,
+            0.050201
+        ]
+    },
+    "error_eps": 0.05,
+    "framebuffer": {
+        "exposure": 3,
+        "hdr": true,
+        "res_h": 1024,
+        "res_w": 1024,
+        "sppx": 32
+    },
+    "scene": {
+        "materials": [],
+        "mesh_files": [],
+        "sky": {
+            "envmap": "envmaps/spruit_sunrise_2k.hdr",
+            "intensity": 3
+        },
+        "volume": {
+            "absorption_cross_section": 0.05,
+            "density_scale": 50,
+            "modelmatrix": [
+                [
+                    0.05,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0.05,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0.05,
+                    0
+                ],
+                [
+                    6.5,
+                    0.5,
+                    -2.8,
+                    1
+                ]
+            ],
+            "phase_g": 0,
+            "raymarch_dt": 1,
+            "scattering_cross_section": 0.05
+        },
+        "volume_path": "smoke.nvdb"
+    }
+}

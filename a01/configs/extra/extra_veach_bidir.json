@@ -1,0 +1,71 @@
+{
+  "algorithm": "Pathtracer",
+  "auto_focus": true,
+  "beauty_render": false,
+  "camera": {
+    "dir": [
+      -1,
+      0,
+      0
+    ],
+    "focal_depth": 4.4844,
+    "fov": 45,
+    "lens_radius": 0.025,
+    "pos": [
+      12,
+      4,
+      0
+    ],
+    "up": [
+      0,
+      1,
+      0
+    ]
+  },
+  "error_eps": 0.05,
+  "framebuffer": {
+    "exposure": 1,
+    "hdr": true,
+    "res_h": 1024,
+    "res_w": 1024,
+    "sppx": 100
+  },
+  "max_cam_path_length": 10,
+  "max_light_path_length": 5,
+  "rr_min_path_length": 1,
+  "rr_threshold": 0.25,
+  "scene": {
+    "materials": [
+      {
+        "absorb": 0.95,
+        "albedo_col": [
+          1.0,
+          0.73946,
+          0.67699
+        ],
+        "coated": false,
+        "ior": 1.657,
+        "name": "LampBSDF",
+        "roughness": 0.231,
+        "type": "metal"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [
+          1,
+          0.99999,
+          0.99999
+        ],
+        "coated": false,
+        "ior": 1.5,
+        "name": "GlassBSDF",
+        "roughness": 0.1,
+        "type": "glass"
+      }
+    ],
+    "mesh_files": [
+      "veach_bidir/veach_bidir.obj"
+    ],
+    "sky": null
+  }
+}

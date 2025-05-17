@@ -1,0 +1,116 @@
+{
+    "algorithm" : "Pathtracer",
+    "auto_focus": true,
+    "beauty_render": false,
+    "camera": {
+        "dir": [-0.57884, -0.47467, 0.66305],
+        "focal_depth": 4.4007,
+        "fov": 70,
+        "lens_radius": 0.025,
+        "pos": [3.883, 3.2571, -4.2558],
+        "up": [-0.31205, 0.88016, 0.35768]
+    },
+    "error_eps": 0.05,
+    "framebuffer": {
+        "exposure": 1,
+        "hdr": true,
+        "res_h": 1024,
+        "res_w": 1024,
+        "sppx": 32
+    },
+    "max_cam_path_length": 10,
+    "max_light_path_length": 10,
+    "rr_min_path_length": 1,
+    "rr_threshold": 0.25,
+    "scene": {
+        "materials": [{
+            "absorb": 0,
+            "albedo_col": [0.64, 0.64, 0.64],
+            "coated": false,
+            "emissive_strength": 0,
+            "ior": 1.3,
+            "name": "Material.001",
+            "roughness": 0.14574,
+            "type": "default"
+        }, {
+        "absorb": 0,
+        "albedo_col": [1, 0.99999, 0.99999],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.52,
+        "name": "bunny_specular",
+        "roughness": 0.14574,
+        "type": "glass"
+        }, {
+        "absorb": 0,
+        "albedo_col": [0.52941, 0.52941, 0.52941],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.52,
+        "name": "bunny_specular.001",
+        "roughness": 0.14574,
+        "type": "translucent"
+        }, {
+        "absorb": 0,
+        "albedo_col": [1, 1, 1],
+        "coated": false,
+        "emissive_strength": 150,
+        "ior": 1,
+        "name": "light",
+        "roughness": 0.1428,
+        "type": "light"
+        }, {
+        "absorb": 0,
+        "albedo_col": [0.053907, 0.074029, 0.48305],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1,
+        "name": "teapot_diffuse",
+        "roughness": 0.25233,
+        "type": "diffuse"
+        }, {
+        "absorb": 0,
+        "albedo_col": [0.083094, 0.45638, 0.10532],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "teapot_diffuse.001",
+        "roughness": 0.061,
+        "type": "default"
+        }, {
+        "absorb": 2.12,
+        "albedo_col": [0.92157, 0.77255, 0.28627],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 0.75,
+        "name": "teapot_specular",
+        "roughness": 0.075378,
+        "type": "gold"
+        }, {
+        "absorb": 2.75,
+        "albedo_col": [0.56471, 0.56471, 0.56471],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 0.15,
+        "name": "teapot_specular.001",
+        "roughness": 0.14003,
+        "type": "silver"
+        }, {
+        "absorb": 2.5,
+        "albedo_col": [0.6902, 0.28235, 0.12941],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.12,
+        "name": "teapot_specular.002",
+        "roughness": 0.16116,
+        "type": "copper"
+        }],
+        "mesh_files": ["checkerpots/checkerpots.obj"],
+        "sky": {
+            "envmap": "envmaps/sunset.hdr",
+            "intensity": 10,
+            "scene_center": [-5.9182, 3.126, -0.017311],
+            "scene_radius": 141.46
+        }
+    }
+}
