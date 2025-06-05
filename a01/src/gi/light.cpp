@@ -27,8 +27,12 @@ std::tuple<glm::vec3, Ray, float> AreaLight::sample_Li(const glm::vec3& position
     // hint: see interaction.h for relevant members of the SurfaceInteraction class
     // hint: you may simply ignore the sample_pdf variable for now
     const glm::vec3 Le = light.Le();
-    Ray shadow_ray = Ray();
-    return { Le, shadow_ray, sample_pdf };
+    const glm::vec3 to_light = light.P - position;
+    const glm::vec3 light_dir = glm::normalize(to_light);
+    //Ray shadow_ray{ position + (1.e-8f) * light_dir, light_dir };
+    Ray shadow_ray{ position + (1.e-8f) * light_dir, light_dir, glm::length(to_light) };
+    const glm::vec3 Li = Le * light.area * glm::max(glm::dot(-light_dir, light.N), 0.f) / glm::dot(to_light, to_light);
+    return { Li, shadow_ray, sample_pdf };
 }
 
 float AreaLight::pdf_Li(const SurfaceHit& light, const Ray& ray) const {

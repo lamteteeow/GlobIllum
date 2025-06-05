@@ -133,13 +133,32 @@ class StratifiedSampler1D : public Sampler<float> {
 public:
     inline void init(uint32_t N) {
         // TODO ASSIGNMENT1
+        n = N;
+        i = 0;
+        // Precompute the strata indices and shuffle them for better distribution
+        strata.resize(N);
+        for (uint32_t i = 0; i < N; ++i)
+            strata[i] = i;
+        RNG::shuffle(strata);
     }
 
     inline float next() {
         // TODO ASSIGNMENT1
         // return the next stratified sample
-        return 0.f;
+        if (i >= n) i = 0; // wrap around if needed
+
+        // Get the current stratum index and compute a jittered sample within it
+        uint32_t stratum = strata[i++];
+
+        // Generate a stratified sample: (stratum + uniform_random) / n
+        // This places the sample randomly within its stratum
+        return (stratum + RNG::uniform<float>()) / float(n);
     }
+
+private:
+    uint32_t n;
+    uint32_t i;
+	std::vector<uint32_t> strata;
 };
 
 // --------------------------------------------------------------------------------
@@ -160,13 +179,38 @@ public:
     inline void init(uint32_t N) {
         // TODO ASSIGNMENT1
         // note: you may assume N to be quadratic
+        n = uint32_t(std::sqrt(N));
+        totalStrata = n * n;
+        i = 0;
+        // Precompute the strata indices and 
+        strata.resize(N);
+        for (uint32_t i = 0; i < N; ++i)
+            strata[i] = i;
+        // Shuffle strata indices for better distribution
+        //RNG::shuffle(strata);
     }
 
     inline glm::vec2 next() {
         // TODO ASSIGNMENT1
         // return the next stratified sample
-        return glm::vec2(0.f);
+        if (i >= totalStrata) i = 0; // wrap around if needed
+
+        // Get the current stratum index
+        uint32_t stratum = strata[i++];
+
+        // Convert linear index to 2D coordinates
+        uint32_t x = stratum % n;
+        uint32_t y = stratum / n;
+
+        // Generate a stratified sample within the 2D cell
+        return (glm::vec2(x, y) + RNG::uniform<glm::vec2>()) / float(n);
     }
+
+private:
+    uint32_t n = 0;
+    uint32_t totalStrata = 0;
+    uint32_t i = 0;
+    std::vector<uint32_t> strata;
 };
 
 class HaltonSampler2D : public Sampler<glm::vec2> {
@@ -174,13 +218,19 @@ public:
     inline void init(uint32_t N) {
         // TODO ASSIGNMENT1
         // note: bases 2 and 3 are commonly used
+        i = 0;
     }
 
     inline glm::vec2 next() {
         // TODO ASSIGNMENT1
         // note: see helper function halton() above
-        return glm::vec2(0.f);
+        glm::vec2 sample(halton(i, 2), halton(i, 3));
+        ++i;
+        return sample;
     }
+
+private:
+    uint32_t i;
 };
 
 class HammersleySampler2D : public Sampler<glm::vec2> {
@@ -188,13 +238,23 @@ public:
     inline void init(uint32_t N) {
         // TODO ASSIGNMENT1
         // note: use a random seed
+        n = N;
+        i = 0;
+        scramble = RNG::uniform<uint32_t>();
     }
 
     inline glm::vec2 next() {
         // TODO ASSIGNMENT1
         // note: see helper function hammersley() above
-        return glm::vec2(0.f);
+        glm::vec2 sample = hammersley(i, n, scramble);
+        ++i;
+        return sample;
     }
+
+private:
+    uint32_t n = 0;
+    uint32_t i = 0;
+    uint32_t scramble = 0;
 };
 
 class LDSampler2D : public Sampler<glm::vec2> {
@@ -202,13 +262,22 @@ public:
     inline void init(uint32_t N) {
         // TODO ASSIGNMENT1
         // note: use two random seeds
+        i = 0;
+        scramble[0] = RNG::uniform<uint32_t>();
+        scramble[1] = RNG::uniform<uint32_t>();
     }
 
     inline glm::vec2 next() {
         // TODO ASSIGNMENT1
         // note: see helper function sample02() above
-        return glm::vec2(0.f);
+        glm::vec2 sample = sample02(i, scramble);
+        ++i;
+        return sample;
     }
+
+private:
+    uint32_t i = 0;
+    uint32_t scramble[2] = { 0, 0 };
 };
 
 // --------------------------------------------------------------------------------

@@ -30,7 +30,8 @@ Ray Camera::view_ray(uint32_t x, uint32_t y, uint32_t w, uint32_t h, const glm::
 Ray Camera::perspective_view_ray(uint32_t x, uint32_t y, uint32_t w, uint32_t h, const glm::vec2& pixel_sample) const {
     // TODO ASSIGNMENT1
     // jitter the view ray to sub-sample the pixel (x, y) using the given random sample "pixel_sample"
-    const glm::vec2 pixel = glm::vec2(x, y) + glm::vec2(.5f);
+    //const glm::vec2 pixel = glm::vec2(x, y) + glm::vec2(.5f);
+    const glm::vec2 pixel = glm::vec2(x, y) + pixel_sample;
     const glm::vec2 ndch = (pixel - glm::vec2(w * .5f, h * .5f)) / glm::vec2(h);
     const float z = -.5f / tanf(.5f * M_PI * fov / 180.f);
     return Ray(pos, eye_to_world * glm::normalize(glm::vec3(ndch.x, ndch.y, z)));
@@ -52,6 +53,13 @@ void Camera::apply_DOF(Ray& ray, const glm::vec2& lens_sample) const {
     // thus, jitter the ray origin on the (circular) thin lens and update the ray's direction to the focal point
     // hint: use the coordinate system given via the tangent and bitangent to jitter the ray's origin
     // hint: the lens size is given in this->lens_radius and the focal distance in this->focal_depth
+    
+    // ray-plane intersection
+    float t = glm::dot((view_dir * focal_depth), view_dir) / glm::dot(view_dir, ray.dir);
+    const glm::vec3 focus_point = ray.org + t * ray.dir;
+    ray.org += tangent * p_on_lens.x * lens_radius;
+    ray.org += bitangent * p_on_lens.y * lens_radius;
+    ray.dir = glm::normalize(focus_point - ray.org);
 }
 
 json11::Json Camera::to_json() const {

@@ -878,7 +878,9 @@ float Context::filter_focal_distance() {
     float logAccum = 0;
     #pragma omp parallel for reduction(+ : logAccum)
     for (uint32_t y = 0; y < fbo.height() / 4; ++y) {
+    //for (int32_t y = 0; y < fbo.height() / 4; ++y) {
         for (uint32_t x = 0; x < fbo.width() / 4; ++x) {
+        //for (int32_t x = 0; x < fbo.width() / 4; ++x) {
             uint32_t xs = fbo.width() / 2 - fbo.width() / 8, ys = fbo.height() / 2 - fbo.height() / 8;
             Ray ray = cam.view_ray(xs + x, ys + y, fbo.width(), fbo.height());
             const SurfaceHit hit = scene.intersect(ray);
