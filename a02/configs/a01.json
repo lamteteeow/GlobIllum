@@ -1,0 +1,32 @@
+{
+    "algorithm": "SimpleRenderer",
+    "auto_focus": true,
+    "camera": {
+        "dir": [0.2526, -0.56456, 0.78579],
+        "focal_depth": 4.8008,
+        "fov": 70,
+        "lens_radius": 0.3,
+        "pos": [-0.56543, 3.2923, -4.4922],
+        "up": [0.17297, 0.82539, 0.5374]
+    },
+    "framebuffer": {
+        "exposure": 3,
+        "hdr": true,
+        "res_h": 720,
+        "res_w": 1280,
+        "sppx": 26
+    },
+    "scene": {
+        "materials": [{
+            "absorb": 0,
+            "albedo_col": [1, 1, 1],
+            "emissive_strength": 15,
+            "ior": 1,
+            "name": "light",
+            "roughness": 0.14425,
+            "type": "light"
+        }],
+        "mesh_files": ["checkerpots/checkerpots.obj"],
+        "sky": null
+    }
+}

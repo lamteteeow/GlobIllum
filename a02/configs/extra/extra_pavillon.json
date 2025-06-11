@@ -1,0 +1,68 @@
+{
+    "algorithm": "Pathtracer",
+    "auto_focus": true,
+    "beauty_render": false,
+    "camera": {
+        "fov": 45,
+        "pos": [
+            -8.86,
+            1.94,
+            -14.96
+        ],
+        "dir": [
+            0.42,
+            0.03,
+            0.91
+        ],
+        "up": [
+            0.0,
+            1.0,
+            0.0
+        ],
+        "focal_depth": 11.518,
+        "lens_radius": 0.0125
+    },
+    "error_eps": 0.05,
+    "framebuffer": {
+        "exposure": 2,
+        "hdr": true,
+        "res_w": 1600,
+        "res_h": 850,
+        "sppx": 16
+    },
+    "max_cam_path_length": 10,
+    "max_light_path_length": 5,
+    "rr_min_path_length": 1,
+    "rr_threshold": 0.25,
+    "scene": {
+        "materials": [
+            {
+                "name": "metal",
+                "absorb": 0.95,
+                "albedo_col": [
+                    0.8,
+                    0.8,
+                    0.8
+                ],
+                "ior": 2.42,
+                "coated": false,
+                "emissive_strength": 0,
+                "roughness": 0.074329,
+                "type": "metal"
+            }
+        ],
+        "mesh_files": [
+            "pavillon/pavillon.obj"
+        ],
+        "sky": {
+            "envmap": "envmaps/clearsky.hdr",
+            "intensity": 10,
+            "scene_radius": 85,
+            "scene_center": [
+                0,
+                1.4748,
+                26.465
+            ]
+        }
+    }
+}
