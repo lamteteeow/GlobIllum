@@ -1,0 +1,86 @@
+{
+    "algorithm": "VolumetricPathtracer",
+    "auto_focus": true,
+    "beauty_render": false,
+    "camera": {
+        "dir": [
+            -0.73307,
+            0.10578,
+            0.67188
+        ],
+        "focal_depth": 15.11,
+        "fov": 70,
+        "lens_radius": 0,
+        "pos": [
+            31.924,
+            6.6623,
+            -1.6726
+        ],
+        "up": [
+            0.078072,
+            0.99439,
+            -0.071371
+        ]
+    },
+    "error_eps": 0.05,
+    "framebuffer": {
+        "exposure": 1,
+        "hdr": true,
+        "res_h": 1024,
+        "res_w": 1024,
+        "sppx": 32
+    },
+    "max_cam_path_length": 32,
+    "max_light_path_length": 5,
+    "rr_min_path_length": 1,
+    "rr_threshold": 0.25,
+    "scene": {
+        "materials": [],
+        "mesh_files": [],
+        "sky": {
+            "envmap": "envmaps/spruit_sunrise_2k.hdr",
+            "intensity": 3,
+            "scene_center": [
+                -5.9182,
+                3.126,
+                -0.017311
+            ],
+            "scene_radius": 141.46
+        },
+        "volume": {
+            "absorption_cross_section": 0.0001,
+            "density_scale": 300,
+            "modelmatrix": [
+                [
+                    0.05,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0.05,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0.05,
+                    0
+                ],
+                [
+                    4,
+                    0.5,
+                    -3,
+                    1
+                ]
+            ],
+            "phase_g": 0,
+            "raymarch_dt": 0.5,
+            "scattering_cross_section": 0.01,
+            "unbiased_estimators": true
+        },
+        "volume_path": "wdas_cloud_quarter.nvdb"
+    }
+}

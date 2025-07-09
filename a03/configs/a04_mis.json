@@ -1,0 +1,111 @@
+{
+    "algorithm": "Pathtracer",
+    "auto_focus": false,
+    "beauty_render": false,
+    "camera": {
+        "dir": [0.050643, -0.48166, -0.87489],
+        "focal_depth": 1,
+        "fov": 70,
+        "lens_radius": 0,
+        "pos": [-0.85342, 4.161, 2.3017],
+        "up": [0.031138, 0.87635, -0.48066]
+    },
+    "error_eps": 0.05,
+    "framebuffer": {
+        "exposure": 3,
+        "hdr": true,
+        "res_h": 1024,
+        "res_w": 1024,
+        "sppx": 32
+    },
+    "max_cam_path_length": 5,
+    "max_light_path_length": 3,
+    "rr_min_path_length": 1,
+    "rr_threshold": 0.25,
+    "scene": {
+        "materials": [{
+            "absorb": 0,
+            "albedo_col": [0.050876, 0.16751, 1],
+            "coated": false,
+            "emissive_strength": 50,
+            "ior": 1,
+            "name": "light_big",
+            "roughness": 0.1428,
+            "type": "light"
+        }, {
+        "absorb": 0,
+        "albedo_col": [0.050876, 1, 0.095962],
+        "coated": false,
+        "emissive_strength": 100,
+        "ior": 1,
+        "name": "light_mid_big",
+        "roughness": 0.1428,
+        "type": "light"
+        }, {
+        "absorb": 0,
+        "albedo_col": [1, 0.87374, 0.050871],
+        "coated": false,
+        "emissive_strength": 500,
+        "ior": 1,
+        "name": "light_mid_small",
+        "roughness": 0.1428,
+        "type": "light"
+        }, {
+        "absorb": 0,
+        "albedo_col": [1, 0.050854, 0.050854],
+        "coated": false,
+        "emissive_strength": 2000,
+        "ior": 1,
+        "name": "light_small",
+        "roughness": 0.1428,
+        "type": "light"
+        }, {
+        "absorb": 0,
+        "albedo_col": [0.3, 0.3, 0.3],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 2.42,
+        "name": "microfacet_high",
+        "roughness": 0.0025,
+        "type": "microfacet"
+        }, {
+        "absorb": 0,
+        "albedo_col": [0.3, 0.3, 0.3],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 2.42,
+        "name": "microfacet_low",
+        "roughness": 0.1,
+        "type": "microfacet"
+        }, {
+        "absorb": 0,
+        "albedo_col": [0.3, 0.3, 0.3],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 2.42,
+        "name": "microfacet_mid_high",
+        "roughness": 0.01,
+        "type": "microfacet"
+        }, {
+        "absorb": 0,
+        "albedo_col": [0.3, 0.3, 0.3],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 2.42,
+        "name": "microfacet_mid_low",
+        "roughness": 0.05,
+        "type": "microfacet"
+        }, {
+        "absorb": 0,
+        "albedo_col": [0.64, 0.64, 0.64],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "plane",
+        "roughness": 0.1428,
+        "type": "default"
+        }],
+        "mesh_files": ["mis.obj"],
+        "sky": null
+    }
+}

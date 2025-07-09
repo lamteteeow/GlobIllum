@@ -113,10 +113,10 @@ vec3 SpecularPhong::f(const SurfaceHit& hit, const vec3& w_o, const vec3& w_i) c
     float normalization = (exponent + 1.0f) / (2.0f * M_PI);
 
     // Half-way vector for Blinn-Phong BRDF
-    vec3 h = normalize(w_o + w_i);
+    //vec3 h = normalize(w_o + w_i);
 
     // Cosine term
-	float cosine_term = dot(hit.N, h);
+	float cosine_term = dot(hit.N, w_o);
 
     // Calculate BRDF
     return hit.albedo() * fresnel_schlick(cosine_term, index_of_refraction) * normalization * pow(cosine_term, exponent);
@@ -157,6 +157,7 @@ vec3 GGX_sample(const vec2& sample, float roughness) {
     // TODO ASSIGNMENT2 (optional)
     // implement sampling the GGX distribution here
     // return a mircofacet normal in tangent space
+    // TODO 2 NdotV and NdotL needed for G term
     const float phi = sample.y * 2.f * M_PI;
     const float tan_t = (roughness * sqrt(sample.x)) / sqrt(1.f - sample.x);
     const float cos_t = 1.f / sqrt(1.f + sqr(tan_t));
@@ -185,11 +186,13 @@ vec3 MicrofacetReflection::f(const SurfaceHit &hit, const vec3 &w_o, const vec3 
     vec3 h = normalize(w_o + w_i);
 
     float cosine_term = dot(hit.N, h);
+    float cosine_term2 = dot(hit.N, w_o);
 
     const float index_of_refraction = hit.mat->ior;
-	float F = fresnel_schlick(cosine_term, index_of_refraction);
-
+	float F = fresnel_schlick(cosine_term2, index_of_refraction);
+    
 	float nominator = F * GGX_D(cosine_term, alpha) * GGX_G1(dot(hit.N, w_o), alpha);
+	// TODO check divide by zero
 	float denominator = 4.0f * abs(dot(hit.N, w_i)) * abs(dot(hit.N, w_o));
 
 	microfacet = nominator / denominator;

@@ -1,0 +1,8 @@
+not interchangeable:
+- to use this general approach for BRDFs, we would need to sample the BRDF in order to generate a distribution,
+just to sample this distribution again -> expensive
+-> use analytical method when function is known and a pdf for it can be computed
+
+- cannot do analytical inversion for environment maps (unless environment map is generated from a function)
+-> we need to use the inversion approach implemented in this exercise (textures are already discretized anyways)
+-> use general inversion method when function is unkown, but discretized function values are given
