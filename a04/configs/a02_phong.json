@@ -1,0 +1,102 @@
+{
+    "algorithm": "DirectIllumination",
+    "auto_focus": true,
+    "beauty_render": false,
+    "camera": {
+        "dir": [0.55003, -0.58553, 0.5955],
+        "focal_depth": 2.8106,
+        "fov": 70,
+        "lens_radius": 0,
+        "pos": [-1.5638, 2.2637, -2.8895],
+        "up": [0.40455, 0.81061, 0.42338]
+    },
+    "error_eps": 0.05,
+    "framebuffer": {
+        "exposure": 3,
+        "hdr": true,
+        "res_h": 720,
+        "res_w": 1280,
+        "sppx": 32
+    },
+    "max_cam_path_length": 10,
+    "max_light_path_length": 10,
+    "rr_min_path_length": 1,
+    "rr_threshold": 0.25,
+    "scene": {
+        "materials": [{
+            "absorb": 0,
+            "albedo_col": [0.64, 0.64, 0.64],
+            "emissive_strength": 0,
+            "ior": 1.3,
+            "name": "Material.001",
+            "roughness": 0.14574,
+            "type": "diffuse"
+        }, {
+        "absorb": 0,
+        "albedo_col": [1, 0.99999, 0.99999],
+        "emissive_strength": 0,
+        "ior": 2.42,
+        "name": "bunny_specular",
+        "roughness": 0.041,
+        "type": "phong"
+        }, {
+        "absorb": 0,
+        "albedo_col": [0.95509, 0.95509, 0.95509],
+        "emissive_strength": 0,
+        "ior": 2.42,
+        "name": "bunny_specular.001",
+        "roughness": 0.305,
+        "type": "phong"
+        }, {
+        "absorb": 0,
+        "albedo_col": [1, 1, 1],
+        "emissive_strength": 50,
+        "ior": 1,
+        "name": "light",
+        "roughness": 0.1428,
+        "type": "light"
+        }, {
+        "absorb": 0,
+        "albedo_col": [0.053907, 0.074029, 0.48305],
+        "emissive_strength": 0,
+        "ior": 1,
+        "name": "teapot_diffuse",
+        "roughness": 0.25233,
+        "type": "diffuse"
+        }, {
+        "absorb": 0,
+        "albedo_col": [0.083094, 0.45638, 0.10532],
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "teapot_diffuse.001",
+        "roughness": 0.061,
+        "type": "diffuse"
+        }, {
+        "absorb": 2.12,
+        "albedo_col": [1, 1, 0.99999],
+        "emissive_strength": 0,
+        "ior": 2.423,
+        "name": "teapot_specular",
+        "roughness": 0.05,
+        "type": "phong"
+        }, {
+        "absorb": 2.75,
+        "albedo_col": [1, 0.99999, 0.99999],
+        "emissive_strength": 0,
+        "ior": 2.42,
+        "name": "teapot_specular.001",
+        "roughness": 0.15,
+        "type": "phong"
+        }, {
+        "absorb": 2.5,
+        "albedo_col": [1, 0.99999, 0.99999],
+        "emissive_strength": 0,
+        "ior": 2.454,
+        "name": "teapot_specular.002",
+        "roughness": 0.443,
+        "type": "phong"
+        }],
+        "mesh_files": ["checkerpots/checkerpots.obj"],
+        "sky": null
+    }
+}

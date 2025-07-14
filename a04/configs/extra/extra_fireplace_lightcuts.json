@@ -1,0 +1,260 @@
+{
+  "algorithm": "LightCuts",
+  "auto_focus": true,
+  "beauty_render": false,
+  "camera": {
+    "dir": [-0.71498, -0.27401, 0.64321],
+    "focal_depth": 4.4842,
+    "fov": 70,
+    "lens_radius": 0,
+    "pos": [4.5133, 1.5917, -3.424],
+    "up": [-0.20317, 0.96173, 0.18386]
+  },
+  "framebuffer": {
+    "exposure": 1,
+    "hdr": true,
+    "res_h": 1024,
+    "res_w": 1024,
+    "sppx": 1
+  },
+  "lightcuts_override_params": false,
+  "lightcuts_vpl_path_count": 32768,
+  "lightcuts_vpl_path_length": 3,
+  "scene": {
+    "materials": [
+      {
+        "absorb": 0,
+        "albedo_col": [0.6, 0.6, 0.6],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "DefaultMaterial",
+        "roughness": 1,
+        "type": "default"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.46, 0, 0],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "grey_and_white_room:BottleCap",
+        "roughness": 1,
+        "type": "default"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.16, 0.08, 0.02],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "grey_and_white_room:Branches",
+        "roughness": 1,
+        "type": "default"
+      },
+      {
+        "absorb": 0.95,
+        "albedo_col": [0.57353, 0.57352, 0.57352],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 2.42,
+        "name": "grey_and_white_room:BrushedStainlessSteel",
+        "roughness": 0.231,
+        "type": "metal"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.1, 0.05, 0.04],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "grey_and_white_room:Dirt",
+        "roughness": 1,
+        "type": "default"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [1, 0.99999, 0.99999],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.52,
+        "name": "grey_and_white_room:FireplaceGlass",
+        "roughness": 0.14003,
+        "type": "glass"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [1, 1, 1],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 2.093,
+        "name": "grey_and_white_room:Floor",
+        "roughness": 0.084,
+        "type": "default"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [1, 0.99999, 0.99999],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.52,
+        "name": "grey_and_white_room:Glass",
+        "roughness": 0.044677,
+        "type": "glass"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0, 0, 0],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "grey_and_white_room:Leaves",
+        "roughness": 0.98533,
+        "type": "default"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.9, 0.9, 0.9],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "grey_and_white_room:MattePaint",
+        "roughness": 1,
+        "type": "default"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.92647, 0.92646, 0.92646],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.52,
+        "name": "grey_and_white_room:Mirror",
+        "roughness": 0.0044721,
+        "type": "specular"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0, 0, 0],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "grey_and_white_room:Painting",
+        "roughness": 1,
+        "type": "default"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.26, 0.25, 0.14],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "grey_and_white_room:PaintingBack",
+        "roughness": 1,
+        "type": "default"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.9, 0.9, 0.9],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "grey_and_white_room:Paneling",
+        "roughness": 0.53452,
+        "type": "default"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.1, 0.1, 0.1],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "grey_and_white_room:PlantPot",
+        "roughness": 1,
+        "type": "default"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.9, 0.9, 0.88],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "grey_and_white_room:Sofa",
+        "roughness": 1,
+        "type": "default"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.1, 0.1, 0.1],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "grey_and_white_room:SofaLegs",
+        "roughness": 1,
+        "type": "default"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0, 0, 0],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "grey_and_white_room:TableWood",
+        "roughness": 0.98533,
+        "type": "default"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.3, 0.3, 0.3],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.52,
+        "name": "grey_and_white_room:Transluscent",
+        "roughness": 1,
+        "type": "translucent"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.17, 0.132, 0.1],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "grey_and_white_room:Walls",
+        "roughness": 1,
+        "type": "default"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.5, 0.5, 0.5],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "grey_and_white_room:initialShadingGroup",
+        "roughness": 1,
+        "type": "default"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [1, 0.99999, 0.99999],
+        "coated": false,
+        "emissive_strength": 30,
+        "ior": 1,
+        "name": "grey_and_white_room:lambert2SG_light",
+        "roughness": 1,
+        "type": "light"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [1, 0.99999, 0.99999],
+        "coated": false,
+        "emissive_strength": 30,
+        "ior": 1.3,
+        "name": "lambert3SG",
+        "roughness": 1,
+        "type": "default"
+      }
+    ],
+    "mesh_files": [
+      "fireplace/fireplace_room.obj"
+    ]
+  }
+}

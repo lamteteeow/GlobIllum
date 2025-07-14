@@ -1,0 +1,88 @@
+{
+  "algorithm": "LightCuts",
+  "auto_focus": true,
+  "beauty_render": false,
+  "camera": {
+    "dir": [
+      -0.745,
+      -0.085,
+      -0.662
+    ],
+    "focal_depth": 4.4844,
+    "fov": 45,
+    "lens_radius": 0,
+    "pos": [
+      3.114,
+      1.361,
+      3.062
+    ],
+    "up": [
+      -0.063,
+      0.996,
+      -0.057
+    ]
+  },
+  "error_eps": 0.05,
+  "framebuffer": {
+    "exposure": 1,
+    "hdr": true,
+    "res_h": 720,
+    "res_w": 1280,
+    "sppx": 1
+  },
+  "max_cam_path_length": 10,
+  "max_light_path_length": 5,
+  "rr_min_path_length": 1,
+  "rr_threshold": 0.25,
+  "lightcuts_override_params": false,
+  "lightcuts_vpl_path_count": 32768,
+  "lightcuts_vpl_path_length": 2,
+  "scene": {
+    "materials": [
+      {
+        "absorb": 0.95,
+        "albedo_col": [
+          1.0,
+          0.53108,
+          0.31454
+        ],
+        "coated": false,
+        "ior": 1.657,
+        "name": "AluminiumBSDF",
+        "roughness": 0.231,
+        "type": "metal"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [
+          1,
+          0.99999,
+          0.99999
+        ],
+        "coated": false,
+        "ior": 1.5,
+        "name": "LampGlassBSDF",
+        "roughness": 0.1,
+        "type": "glass"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [
+          0.92647,
+          0.92646,
+          0.92646
+        ],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.52,
+        "name": "MirrorBSDF",
+        "roughness": 0.0044721,
+        "type": "specular"
+      }
+    ],
+    "mesh_files": [
+      "bedroom/bedroom.obj"
+    ],
+    "sky": null
+  }
+}
