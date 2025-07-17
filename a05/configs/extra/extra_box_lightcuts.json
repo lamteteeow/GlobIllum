@@ -1,0 +1,120 @@
+{
+  "algorithm": "LightCuts",
+  "auto_focus": true,
+  "beauty_render": false,
+  "camera": {
+    "dir": [0, 0, -1],
+    "focal_depth": 3.1065,
+    "fov": 70,
+    "lens_radius": 0,
+    "pos": [0, 1, 2.5],
+    "up": [0.0016, 1, 0]
+  },
+  "framebuffer": {
+    "exposure": 1,
+    "hdr": true,
+    "res_h": 1024,
+    "res_w": 1024,
+    "sppx": 1
+  },
+  "lightcuts_override_params": false,
+  "lightcuts_vpl_path_count": 2048,
+  "lightcuts_vpl_path_length": 2,
+  "scene": {
+    "materials": [
+      {
+        "absorb": 0,
+        "albedo_col": [0.6, 0.6, 0.6],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "DefaultMaterial",
+        "roughness": 1,
+        "type": "diffuse"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.63, 0.065, 0.05],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.5,
+        "name": "leftWall_diffuse",
+        "roughness": 0.40825,
+        "type": "diffuse"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.14, 0.45, 0.091],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.5,
+        "name": "rightWall_diffuse",
+        "roughness": 0.40825,
+        "type": "diffuse"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.725, 0.71, 0.68],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1,
+        "name": "floor_diffuse",
+        "roughness": 0.40825,
+        "type": "diffuse"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.725, 0.71, 0.68],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1,
+        "name": "ceiling_diffuse",
+        "roughness": 0.40825,
+        "type": "diffuse"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.725, 0.71, 0.68],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1,
+        "name": "backWall_diffuse",
+        "roughness": 0.40825,
+        "type": "diffuse"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.725, 0.71, 0.68],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "shortBox",
+        "roughness": 0.40825,
+        "type": "diffuse"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.725, 0.71, 0.68],
+        "coated": false,
+        "emissive_strength": 0,
+        "ior": 1.3,
+        "name": "tallBox",
+        "roughness": 0.40825,
+        "type": "diffuse"
+      },
+      {
+        "absorb": 0,
+        "albedo_col": [0.78, 0.78, 0.78],
+        "coated": false,
+        "emissive_strength": 100,
+        "ior": 1,
+        "name": "light",
+        "roughness": 0.19612,
+        "type": "light"
+      }
+    ],
+    "mesh_files": [
+      "CornellBox-Original.obj"
+    ]
+  }
+}
